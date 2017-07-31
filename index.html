@@ -2,12 +2,14 @@
 	<head>
 			<meta charset="UTF-8">
 			<title>Build-A-Unicorn!</title>
-			<link href="css/bootstrap.min.css" rel="stylesheet">
-			<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+			
+			<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+			<link href="nouislider.min.css" rel="stylesheet">
 			<link rel="stylesheet" href="css/style.css">
+      		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="container-fluid gradient">
 			<div class="row custom">
 				<div class="col-md-12">
 		  			<img src="images/navbar.png" alt="navegacion">
@@ -22,19 +24,84 @@
 		    <div class="row">
 		    	<div class="col-md-12 unicornio">
 			    	<div class="form">
+			    		<div class="row modified">
+				    		<div class="input-field">
+						          <input type="text" class="validate" id="input">
+						          <label for="first_name" class="label">Unicorn's Name</label>
+	        				</div>
+	        			</div>
+	        			<div class="row modified">
+      						<div class="input-field">
+							    <select>
+							      <option value="" disabled selected>Unicorn's Gender</option>
+							      <option value="1">Option 1</option>
+							      <option value="2">Option 2</option>
+							      <option value="3">Option 3</option>
+							    </select>	
+  							</div>
+  						</div>
+  						<div class="row modified">
+      						<div class="input-field">
+							    <select>
+							      <option value="" disabled selected>Fur Color</option>
+							      <option value="1">Blue</option>
+							      <option value="2">Pink</option>
+							      <option value="3">Purple</option>
+							      <option value="4">Orange</option>
+							      <option value="5">Lime</option>
+							      <option value="6">Black</option>
+							      <option value="7">White</option>
+							      <option value="8">All of them!</option>
+							    </select>	
+  							</div>
+  						</div>
+						<div class="row">
+							<div class="myClass">
+						      	<input type="range" min="5" max="25">
+
+						      	<div class="scale">	
+							    	<label for="min">5 cm</label>
+							    	<label for "max">25 cm</label>
+							    </div>
+						    </div>
+ 						</div>
+	        			<div class="row modified">
+					        <div class="input-field">
+					          <input type="email" class="validate" id="inputmail">
+					          <label for="email" class="label">Email</label>
+					        </div>
+      					</div>
+      					<div class="row modified">
+      						<div class="check">
+	      						<p>
+								      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+								      <label for="filled-in-box" class="align">I accept terms and conditions</label>
+	    						</p>
+    						</div>
+    					</div>
+    					<div class="row modified">
+    						<a class="waves-effect waves-light btn myBtn">Get my unicorn</a>
+    					</div>
+      					
+
+			    		<!-- this is the HTML5 that works for the no-framework label animation
+
 			    		<div class="estiloInput">
-			    			<input type="text">
+			    			<input type="text" id="name" onfocusout="validarNombre()">
 			    			<label>Unicorn's name</label>
 			    		</div>
+			    		
 			    		<div class="estiloInput">
 			    			<input type="text">
 			    			<label>Email address</label>
-			    		</div>
-			    	</div> 
-			    </div>
+			    		</div> -->
+			    	</div> <!-- cierra row -->
+			    </div> <!-- cierra col --> 
 		    </div>  <!--cierra row -->
   		</div> <!-- cierra container-fluid -->
 		<script src="js/jquery-3.2.1.min.js"></script>
+      	<script type="text/javascript" src="js/materialize.min.js"></script>
+      	<script src="nouislider.min.js"></script>
 		<script src="js/functions.js"></script>	
 
 		</body>

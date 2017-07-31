@@ -1,4 +1,10 @@
 $(document).ready(function() { 
+    $('select').material_select();
+
+        
+  
+	/* this is the code I wrote to animate labels without frameworks: 
+
 	var myInputs =  $(".estiloInput");
 
 	myInputs.each(function() {
@@ -11,8 +17,10 @@ $(document).ready(function() {
 		$(input).on("focusout", function(){ 
 			focusOut(input, label)
 		});
-	});
+	});*/
 }); 
+
+/* this are the functions invoked above for the label animation. In my first commit you can see this, working. 
 
 function focus (input, label) {
 	if (!label.classList.contains('active') && input.value == '') {
@@ -28,4 +36,13 @@ function focusOut (input, label) {
         $(label).removeClass('active');
     };
 
-}
+} */
+
+/*function validarNombre () {
+	if ($('#name').val() == '') {
+		$('#nombre').append('<p>Ingrese un nombre<p>'); 
+		$('#nombre').show();
+	}
+}*/
+
+ 

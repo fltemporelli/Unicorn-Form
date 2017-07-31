@@ -9,6 +9,20 @@ body {
 	background-size: cover; 
 	background-repeat: no-repeat;
 }
+  	/*background-image: radial-gradient(ellipse 100% 850px at right 250px, #44B8BA, #E1D9CC 85%, #E3AEBE);
+  	background-position: 0 75px; 
+}
+
+
+.gradient {
+	background: linear-gradient(140deg, rgba(227, 174, 190, 0.8), transparent 50%);
+	height: 850px;
+}
+
+ Note: the gradient is far from perfect, but it is the closest I could get. 
+I think the background-image works just fine but it would take too much time to 
+load in mobile devices and in screens larger than 1240x850 the image quality 
+is not good enough, so I think I'll fix that with medias-queries */
 
 .titulo {
 	display: flex;
@@ -24,9 +38,10 @@ body {
 	margin-top: 45px;
 }
 
-.custom {
+.row.custom {
 	background: #00BCD4;
 	height: 74px;
+	margin-top: 0px;
 }
 
 .custom h2 {
@@ -69,10 +84,14 @@ body {
 	justify-content: center; 
 }
 
+/* this is the css that works with the inputs I did prior to the use of Materialize.  
+
+
 .estiloInput {
 	position: relative;
 	display: flex;
 	justify-content: center; 
+	height: 66px;
 }
 
 .estiloInput label {
@@ -90,6 +109,8 @@ body {
     font-family: "roboto"; 
     font-weight: 400; 
 }
+
+
 
 input {
     background-color: transparent;
@@ -116,4 +137,241 @@ input {
     -ms-transform: translateY(-60%);
     -o-transform: translateY(-60%);
     transform: translateY(-24px); 
+}
+
+*/
+.modified {
+	display: flex;
+	justify-content: center; 
+}
+
+input#input {
+	margin: 0px;
+	width: 330px;
+	font-size: 16px;
+	font-family: "roboto";
+	font-weight: 400; 
+	border-bottom: 1px solid #DBDBDB;
+}
+
+input#inputmail {
+	margin: 0px;
+	width: 330px;
+	font-size: 16px;
+	font-family: "roboto";
+	font-weight: 400;
+	border-bottom: 1px solid #DBDBDB;
+}
+
+.input-field {
+	width: 330px;
+	height: 70px;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 24px;
+}
+
+.input-field label.label {
+	position: absolute;
+	top: 0;
+	width: 330px;
+	height: 70px;
+	font-size: 16px;
+	font-family: "Roboto"; 
+}
+
+.input-field label.label.active {
+	height: 57.5px;
+	position: absolute;
+	bottom: 0;
+	transform: translateY(-10px) scale(0.75);
+	color: #AAAAAA; 
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.myClass {
+	width: 228px;
+	margin-left: 76px;
+}
+
+.check p {
+	width: 330px;
+
+}
+
+.check p label.align {
+	padding-left: 65px;
+}
+
+[type="checkbox"].filled-in:checked+label:after {
+	border-color: #80DEEA;
+	background-color: #80DEEA; 
+	
+
+}
+
+[type="checkbox"].filled-in:not(:checked)+label:after {
+   
+    border: 2px solid #DBDBDB;
+   
+}
+
+
+
+.scale {
+	display: flex;
+	justify-content: space-between;
+}
+
+.scale label {
+	font-size: 8px;
+	margin: 0;
+	padding: 0; 
+}
+
+input[type=range] {
+	height: 5px;
+	margin: 0px;
+	border: 0px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 3px;
+  background: #DBDBDB;
+  border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: #80DEEA;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  margin: -5px 0 0 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #DBDBDB;
+}
+
+input[type=range] {
+  /* fix for FF unable to apply focus style bug  */
+  border: 1px solid white;
+  /*required for proper track sizing in FF*/
+}
+
+input[type=range]::-moz-range-track {
+  height: 3px;
+  background: red;
+  border: none;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: red;
+  margin-top: -5px;
+}
+
+input[type=range]:-moz-focusring {
+  outline: 1px solid #fff;
+  outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+  background: red;
+}
+
+input[type=range]::-ms-track {
+  height: 3px;
+  background: red;
+  border-color: transparent;
+  border-width: 6px 0;
+  /*remove default tick marks*/
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #777;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #ddd;
+}
+
+input[type=range]::-ms-thumb {
+  border: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: red;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: red;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: red;
+}
+
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=url]:not(.browser-default):focus:not([readonly]) + label,
+input[type=time]:not(.browser-default):focus:not([readonly]) + label,
+input[type=date]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label,
+input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
+input[type=number]:not(.browser-default):focus:not([readonly]) + label,
+input[type=search]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #AAAAAA;
+}
+
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #DBDBDB;
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+}
+
+/*.input-field label:not(.label-icon).active {
+
+}*/
+
+.btn.myBtn {
+	background-color: #00ACC1; 
 }
