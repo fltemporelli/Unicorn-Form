@@ -25,13 +25,14 @@
 		    	<div class="col-md-12 unicornio">
 			    	<div class="form">
 			    		<div class="row modified">
-				    		<div class="input-field">
+				    		<div class="input-field error2" data-pos="Name your unicorn!">
 						          <input type="text" id="input">
-						          <label for="first_name" class="label">Unicorn's Name</label>
+						          <label for="first_name" class="label" >Unicorn's Name</label>
 	        				</div>
 	        			</div>
 	        			<div class="row modified">
-      						<div class="input-field">
+      						<div class="input-field error" data-pos="Choose one">
+							    <label for="select" class="selection">Unicorn's Gender</label>
 							    <select>
 							      <option value="" disabled selected>Unicorn's Gender</option>
 							      <option value="1">Female</option>
@@ -41,9 +42,10 @@
   							</div>
   						</div>
   						<div class="row modified">
-      						<div class="input-field">
+      						<div class="input-field error" data-pos="Choose one">
+      					        <label for="select" class="selection">Fur color</label>
 							    <select>
-							      <option value="" disabled selected>Fur Color</option>
+							      <option value="" disabled selected>Fur color</option>
 							      <option value="1">Blue</option>
 							      <option value="2">Pink</option>
 							      <option value="3">Purple</option>
@@ -57,6 +59,7 @@
   						</div>
 						<div class="row">
 							<div class="myClass">
+								<label for="input">Horn length</label>
 						      	<input type="range" min="5" max="25">
 						      	<div class="scale">	
 							    	<label for="min">5 cm</label>
@@ -64,10 +67,10 @@
 							    </div>
 						    </div>
  						</div>
-	        			<div class="row modified">
+	        			<div class="row modified2">
 					        <div class="input-field">
 					          <input type="email" class="validate" id="inputmail">
-					          <label for="email" class="label">Email</label>
+					          <label for="email" class="label" data-error="Not a valid email address!">Email address</label>
 					        </div>
       					</div>
       					<div class="row modified">
