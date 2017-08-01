@@ -3,6 +3,8 @@ $(document).ready(function() {
 
 
         reset (); 
+
+    dropDown(); 
   
 	/* this is the code I wrote to animate labels without frameworks: 
 
@@ -67,7 +69,15 @@ function formValidation () {
 }
 
 function reset () {
-		$('#unicornName').on("focus", function() {
+		$('#unicornName').on('focus', function() {
 			$('div.errors p').slideUp(); 
 		}); 
+}
+
+function dropDown() {
+
+		$('#nav').on('click', function () {
+				$('#menu-dropdown').toggle(500); 
+		}); 
+
 }

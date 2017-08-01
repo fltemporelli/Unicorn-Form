@@ -467,3 +467,37 @@ div.error3 p {
   top: 30px;
   color: #AAAAAA;
 }
+
+div#menu-dropdown {
+  position: absolute;
+  display: none;
+}
+
+div#menu-dropdown ul {
+  background-color: #ccbadc;
+  color: white;
+  width: 300px;
+  box-shadow: 0px 5px 8px rgba(0,0,0,0.24), 0 5px 8px rgba(0,0,0,0.18); 
+  border-radius: 3px;
+  opacity: 0.8;
+}
+
+div#menu-dropdown ul:hover {
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.24), 0 5px 15px rgba(0,0,0,0.18); 
+
+}
+
+div#menu-dropdown ul li {
+  height: 35px;
+  text-align: center; 
+  font-family: "roboto"; 
+  padding-top: 10px;
+}
+
+div#menu-dropdown ul li:hover {
+  height: 35px;
+  text-align: center; 
+  font-family: "roboto"; 
+  padding-top: 10px;
+  font-weight: 600; 
+}
