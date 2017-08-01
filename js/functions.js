@@ -1,7 +1,8 @@
 $(document).ready(function() { 
     $('select').material_select();
 
-        
+
+        reset (); 
   
 	/* this is the code I wrote to animate labels without frameworks: 
 
@@ -20,7 +21,8 @@ $(document).ready(function() {
 	});*/
 }); 
 
-/* this are the functions invoked above for the label animation. In my first commit you can see this, working. 
+/* this are the functions invoked above for the label animation. You can see this in the first 
+commit. 
 
 function focus (input, label) {
 	if (!label.classList.contains('active') && input.value == '') {
@@ -38,11 +40,34 @@ function focusOut (input, label) {
 
 } */
 
-/*function validarNombre () {
-	if ($('#name').val() == '') {
-		$('#nombre').append('<p>Ingrese un nombre<p>'); 
-		$('#nombre').show();
-	}
-}*/
+		
 
- 
+function formValidation () {
+		
+		var gender = document.getElementById('gender').value;  
+		/*I had to use "getElementById" because it didn't seem to work with Jquery selector*/
+		var furColor = document.getElementById('color').value; 
+		var unicornName = document.getElementById('unicornName').value; 
+
+		console.log(unicornName); 
+		console.log(gender); 
+
+		if(gender == '') {
+			$('div.sarasa p').show();
+		}
+
+		if(furColor == '') {
+			$('div.error3 p').show();
+		} 
+
+		if(unicornName == '') {
+			$('div.errors p').show(); 
+		}
+
+}
+
+function reset () {
+		$('#unicornName').on("focus", function() {
+			$('div.errors p').slideUp(); 
+		}); 
+}

@@ -429,26 +429,37 @@ label.selection {
   display: none;
 } 
 
-div.error::after {
-  content: attr(data-pos);
+div.errors p {
   color: #F44336;
   opacity: 1;
-  font-size: 12px;
-  -webkit-transform: translateY(67px);
-          transform: translateY(67px);
   display: none;
   font-family: "Roboto";
+  z-index: 1;
+  position: absolute;
+  top: 70px;
+  font-size: 12px;
 }
 
-div.error2::after {
-  content: attr(data-pos);
+div.sarasa p {
   color: #F44336;
   opacity: 1;
-  font-size: 12px;
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
   display: none;
   font-family: "Roboto";
+  z-index: 1;
+  position: absolute;
+  top: 70px;
+  font-size: 12px;
+}
+
+div.error3 p {
+  color: #F44336;
+  opacity: 1;
+  display: none;
+  font-family: "Roboto";
+  z-index: 1;
+  position: absolute;
+  top: 70px;
+  font-size: 12px;
 }
 
 .select-wrapper span.caret {

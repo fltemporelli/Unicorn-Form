@@ -4,7 +4,7 @@
 			<title>Build-A-Unicorn!</title>
 			
 			<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-			<link href="nouislider.min.css" rel="stylesheet">
+
 			<link rel="stylesheet" href="css/style.css">
       		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
@@ -16,6 +16,13 @@
 		    		<h2>Build-A-Unicorn</h2>
 		    	</div>
 		    </div>
+		    <div class="menu-dropdown">
+		    		<ul>
+		    			<li></li>
+		    			<li></li>
+		    			<li></li>	
+		    		</ul>
+		    </div>
 		    <div class="row">
 		    	<div class="col s12 titulo">
 		    		<h1>It's time to build your Unicorn! Let's go!</h1>
@@ -25,27 +32,29 @@
 		    	<div class="col s12 unicornio">
 			    	<div class="form">
 			    		<div class="row modified">
-				    		<div class="input-field error2" data-pos="Name your unicorn!">
-						          <input type="text" id="input">
+				    		<div class="input-field error2">
+						          <input type="text" id="unicornName">
 						          <label for="first_name" class="label" >Unicorn's Name</label>
+						          <div class="errors"><p>Name your unicorn!</p></div>
 	        				</div>
 	        			</div>
-	        			<div class="row modified">
-      						<div class="input-field error" data-pos="Choose one">
+	        			<div class="row modified" id="fade">
+      						<div class="input-field">
 							    <label for="select" class="selection">Unicorn's Gender</label>
-							    <select>
-							      <option value="" disabled selected>Unicorn's Gender</option>
+							    <select id="gender">
+							      <option value="">Unicorn's Gender</option>
 							      <option value="1">Female</option>
 							      <option value="2">Male</option>
 							      <option value="3">Doesn't believe in gender</option>
 							    </select>	
+							    <div class="sarasa"><p>Choose one</p></div>
   							</div>
   						</div>
   						<div class="row modified">
-      						<div class="input-field error" data-pos="Choose one">
+      						<div class="input-field">
       					        <label for="select" class="selection">Fur color</label>
-							    <select>
-							      <option value="" disabled selected>Fur color</option>
+							    <select id="color">
+							      <option  value="" disabled selected>Fur color</option>
 							      <option value="1">Blue</option>
 							      <option value="2">Pink</option>
 							      <option value="3">Purple</option>
@@ -55,6 +64,7 @@
 							      <option value="7">White</option>
 							      <option value="8">All of them!</option>
 							    </select>	
+							    <div class="error3"><p>Choose one</p></div>
   							</div>
   						</div>
 						<div class="row">
@@ -82,7 +92,7 @@
     						</div>
     					</div>
     					<div class="row modified">
-    						<a class="waves-effect waves-light btn myBtn">Get my unicorn</a>
+    						<a class="waves-effect waves-light btn myBtn" onclick="formValidation()">Get my unicorn</a>
     					</div>
       					
 
@@ -103,7 +113,6 @@
   		</div> <!-- cierra container-fluid -->
 		<script src="js/jquery-3.2.1.min.js"></script>
       	<script type="text/javascript" src="js/materialize.min.js"></script>
-      	<script src="nouislider.min.js"></script>
 		<script src="js/functions.js"></script>	
 
 		</body>
