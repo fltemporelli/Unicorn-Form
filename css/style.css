@@ -51,7 +51,7 @@ is not good enough, so I think I'll fix that with medias-queries */
 	color: #FFFFFF;
 	display: inline;
 	position: relative;
-	top: 28px;
+	top: 25px;
 	left: 56px;
 	margin: 0;
 }
@@ -241,9 +241,9 @@ input[type=email]:not(.browser-default) {
 }
 
 div.select-wrapper {
-  height: 65px;
+  height: 45px;
   position: absolute;
-  top: 0;
+  top: 20px;
 }
 
 
@@ -251,7 +251,7 @@ input[type=text].select-dropdown {
   height: 30px;
   color: #AAAAAA;
   margin: 0;
-  margin-top: 35px;
+  margin-top: 18px;
 }
 
 .scale {
@@ -415,6 +415,11 @@ textarea.materialize-textarea:focus:not([readonly]) {
   background-color: #EEEEEE; 
 }
 
+ul.select-dropdown.dropdown-content.active {
+  position: absolute;
+  top: 20px;
+}
+
 .select-dropdown li.disabled>span {
   background-color: #EEEEEE;
   color: #AAAAAA;
@@ -444,4 +449,10 @@ div.error2::after {
           transform: translateY(2px);
   display: none;
   font-family: "Roboto";
+}
+
+.select-wrapper span.caret {
+  position: absolute;
+  top: 30px;
+  color: #AAAAAA;
 }
