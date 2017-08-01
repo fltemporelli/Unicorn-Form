@@ -145,63 +145,74 @@ input {
 	justify-content: center; 
 }
 
-input#input {
-	margin: 0px;
-	width: 330px;
-	font-size: 16px;
-	font-family: "roboto";
-	font-weight: 400; 
-	border-bottom: 1px solid #DBDBDB;
-}
 
-input#inputmail {
-	margin: 0px;
+input[type=text]:not(.browser-default) {
+	margin: 0;
+  padding: 0;
 	width: 330px;
 	font-size: 16px;
 	font-family: "roboto";
 	font-weight: 400;
 	border-bottom: 1px solid #DBDBDB;
+  height: 30px;
+  margin-top: 35px;
+}
+
+input[type=email]:not(.browser-default) {
+  margin: 0;
+  padding: 0;
+  width: 330px;
+  font-size: 16px;
+  font-family: "roboto";
+  font-weight: 400;
+  border-bottom: 1px solid #DBDBDB;
+  height: 78px;
+  height: 30px;
+  margin-top: 35px;
 }
 
 .input-field {
 	width: 330px;
-	height: 70px;
 	margin: 0;
 	padding: 0;
-	padding-bottom: 24px;
+  height: 65px;
 }
 
 .input-field label.label {
-	position: absolute;
-	top: 0;
 	width: 330px;
-	height: 70px;
+	height: 65px;
 	font-size: 16px;
 	font-family: "Roboto"; 
+  position: absolute;
+  top: 25px;
 }
 
 .input-field label.label.active {
 	height: 57.5px;
 	position: absolute;
 	bottom: 0;
-	transform: translateY(-10px) scale(0.75);
+	transform: translateY(-6px) scale(0.75);
 	color: #AAAAAA; 
 }
 
 .row {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
 .myClass {
 	width: 228px;
 	margin-left: 76px;
+  height: 65px;
+  padding-top: 64px;
 }
 
 .check p {
 	width: 330px;
+  margin-top: 44px;
+  margin-bottom: 34px;
 
 }
 
@@ -222,7 +233,14 @@ input#inputmail {
    
 }
 
+div.select-wrapper {
+  height: 65px;
+}
 
+
+input[type=text].select-dropdown {
+  height: 65px;
+}
 
 .scale {
 	display: flex;
@@ -347,6 +365,7 @@ input[type=number]:not(.browser-default):focus:not([readonly]) + label,
 input[type=search]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
   color: #AAAAAA;
+  height: 65px;
 }
 
 
@@ -374,4 +393,19 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 .btn.myBtn {
 	background-color: #00ACC1; 
+  margin-bottom: 23px;
+  width: 154px;
+  padding: 0px;
+}
+
+.dropdown-content li>a, .dropdown-content li>span { 
+
+  color: black;
+
+}
+
+.dropdown-content li>a, .select-dropdown li>span { 
+
+  background-color: grey; 
+
 }

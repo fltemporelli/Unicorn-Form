@@ -4841,7 +4841,7 @@ if (jQuery) {
       var wrapper = $('<div class="select-wrapper"></div>');
       wrapper.addClass($select.attr('class'));
       if ($select.is(':disabled')) wrapper.addClass('disabled');
-      var options = $('<ul id="select-options-' + uniqueID + '" class="dropdown-content select-dropdown ' + (multiple ? 'multiple-select-dropdown' : '') + '"></ul>'),
+      var options = $('<ul id="select-options-' + uniqueID + '" class="dropdown-content select-dropdown' + (multiple ? 'multiple-select-dropdown' : '') + '"></ul>'),
           selectChildren = $select.children('option, optgroup'),
           valuesSelected = [],
           optionsHover = false;

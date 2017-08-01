@@ -1,6 +1,0 @@
-Facing Material Design - Bitacore: 
-
-Day one: No frameworks convinced me. So I'm doing this the old-fashion way, styling HTML5 with css and Jquery (first I was doing it with pure javascript, but Jquery selectors just make everything much easier). I managed, somehow, to do the form's shading and the animation in the type:text inputs. It requierd *lots of research* though. 
-
-Day two: I discovered materialize.css. I will try to mix the framework with the things I already did. Had like eight cups of coffee since I started to code. 
-
