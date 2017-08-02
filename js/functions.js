@@ -1,4 +1,7 @@
 $(document).ready(function() { 
+    
+
+
     $('select').material_select();
 
 
@@ -16,12 +19,22 @@ $(document).ready(function() {
 	    $('.line').css('width', val2); 
 	});
 
-
 	var checkbox = $('input[type="checkbox"]'); 
 
 			$(checkbox).on("click", function () { 
 
-			checkbox.attr("value", "off"); 
+			if(checkbox.attr("value") == "on") {
+
+				checkbox.attr("value", "off"); 
+
+			}
+
+			else {
+
+				checkbox.attr("value", "on");
+			
+			}
+
 
 	}); 
    /* $('input[type="range"]::-webkit-slider-runnable-track').change(function () {
@@ -73,14 +86,10 @@ function focusOut (input, label) {
 		
 
 function formValidation () {
-		
 		var gender = document.getElementById('gender').value;  
-		/*I had to use "getElementById" because it didn't seem to work with Jquery selector*/
 		var furColor = document.getElementById('color').value; 
 		var unicornName = document.getElementById('unicornName').value; 
-
-		console.log(unicornName); 
-		console.log(gender); 
+		var checkedValue = 	document.getElementById('checkbox').value; 
 
 		if(gender == '') {
 			$('div.show p').show();
@@ -94,11 +103,30 @@ function formValidation () {
 			$('div.errors p').show(); 
 		}
 
+		if(checkedValue == 'on') {
+			$('.row .checked p').show(); 
+		}
+
+
+
 }
 
 function reset () {
 		$('#unicornName').on('focus', function() {
 			$('div.errors p').slideUp(); 
+		}); 
+
+		$('#checkbox').on('click', function () {
+			$('.row .checked p').slideUp(); 
+		}); 
+
+		$('#gender').on('change', function () {
+			$('div.show p').slideUp();
+		}); 
+
+
+		$('#color').on('change', function () {
+			$('div.error3 p').slideUp();
 		}); 
 }
 

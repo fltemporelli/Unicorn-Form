@@ -219,7 +219,7 @@ input[type=email]:not(.browser-default) {
 .check p {
 	width: 330px;
   margin-top: 44px;
-  margin-bottom: 34px;
+  margin-bottom: 0px;
 
 }
 
@@ -429,6 +429,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
   margin-bottom: 23px;
   width: 154px;
   padding: 0px;
+  margin-top: 18px;
 }
 
 .dropdown-content li>a, .dropdown-content li>span { 
@@ -446,6 +447,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
 label.selection {
   display: none;
 } 
+
+/* errors divs style */
 
 div.errors p {
   color: #F44336;
@@ -478,6 +481,32 @@ div.error3 p {
   position: absolute;
   top: 70px;
   font-size: 12px;
+}
+
+.row .checked {
+  height: 15px;
+}
+
+.row .checked p {
+  color: #F44336;
+  opacity: 1;
+  display: none;
+  font-family: "Roboto";
+  z-index: 1;
+  position: relative;
+  top: 0px;
+  font-size: 12px;
+  left: 75px;
+}
+
+.material-icons {
+  font-size: 18px; 
+  color: red;
+}
+
+.icon {
+  text-align: right; 
+  display: none;
 }
 
 .select-wrapper span.caret {

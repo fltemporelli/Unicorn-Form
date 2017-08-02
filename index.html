@@ -4,7 +4,9 @@
 			<title>Build-A-Unicorn!</title>
 			
 			<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 			<link rel="stylesheet" href="css/style.css">
+
       		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
 	<body>
@@ -79,18 +81,23 @@
  						</div>
 	        			<div class="row modified2">
 					        <div class="input-field">
-					          <input type="email" class="validate" id="inputmail">
+					          <input type="email" class="validate" id="mail">
 					          <label for="email" class="label" data-error="Not a valid email address!">Email address</label>
+					          <div class="icon"><i class="material-icons">warning</i></div>
 					        </div>
       					</div>
       					<div class="row modified">
       						<div class="check">
 	      						<p>
-								      <input type="checkbox" class="filled-in" id="checkbox" name="checkbox" value="on">
-								      <label for="checkbox" class="align">I accept terms and conditions</label>
+									    <input type="checkbox" class="filled-in" id="checkbox" name="checkbox" value="on">
+									    <label for="checkbox" class="align">I accept terms and conditions</label>
 	    						</p>
     						</div>
     					</div>
+    					<div class="row checked">
+								      	<p id="checkbox-error">Hey! Click here!</p>
+						</div>
+
     					<div class="row modified">
     						<a class="waves-effect waves-light btn myBtn" onclick="formValidation()">Get my unicorn</a>
     					</div>
