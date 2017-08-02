@@ -4,7 +4,6 @@
 			<title>Build-A-Unicorn!</title>
 			
 			<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
 			<link rel="stylesheet" href="css/style.css">
       		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
@@ -47,7 +46,7 @@
 							      <option value="2">Male</option>
 							      <option value="3">Doesn't believe in gender</option>
 							    </select>	
-							    <div class="sarasa"><p>Choose one</p></div>
+							    <div class="show"><p>Choose one</p></div>
   							</div>
   						</div>
   						<div class="row modified">
@@ -70,7 +69,8 @@
 						<div class="row">
 							<div class="myClass">
 								<label for="input">Horn length</label>
-						      	<input type="range" min="5" max="25">
+								<div class="line"></div>  
+      							<input type="range" id="test5" min="5" max="25" />
 						      	<div class="scale">	
 							    	<label for="min">5 cm</label>
 							    	<label for "max">25 cm</label>
@@ -86,8 +86,8 @@
       					<div class="row modified">
       						<div class="check">
 	      						<p>
-								      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-								      <label for="filled-in-box" class="align">I accept terms and conditions</label>
+								      <input type="checkbox" class="filled-in" id="checkbox" name="checkbox" value="on">
+								      <label for="checkbox" class="align">I accept terms and conditions</label>
 	    						</p>
     						</div>
     					</div>

@@ -2,9 +2,37 @@ $(document).ready(function() {
     $('select').material_select();
 
 
-        reset (); 
+    reset (); 
 
     dropDown(); 
+
+    closeDropdown(); 
+
+
+	$('input[type="range"]').on("input change", function () {
+	    var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
+	    var val2 = val*228; 
+
+	    $('.line').css('width', val2); 
+	});
+
+
+	var checkbox = $('input[type="checkbox"]'); 
+
+			$(checkbox).on("click", function () { 
+
+			checkbox.attr("value", "off"); 
+
+	}); 
+   /* $('input[type="range"]::-webkit-slider-runnable-track').change(function () {
+    var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
+    
+    $(this).css('background-image',
+                'linear-gradient(to right'
+                + ', #94A14E' + val*100 + '), '
+                + ', #C5C5C5' + val*100 + ')'
+                );
+	});*/
   
 	/* this is the code I wrote to animate labels without frameworks: 
 
@@ -55,7 +83,7 @@ function formValidation () {
 		console.log(gender); 
 
 		if(gender == '') {
-			$('div.sarasa p').show();
+			$('div.show p').show();
 		}
 
 		if(furColor == '') {
@@ -78,6 +106,13 @@ function dropDown() {
 
 		$('#nav').on('click', function () {
 				$('#menu-dropdown').toggle(500); 
+		}); 
+
+}
+
+function closeDropdown() {
+		$('#nav').on('focusout', function () {
+				$('#menu-dropdown').hide(500); 
 		}); 
 
 }
