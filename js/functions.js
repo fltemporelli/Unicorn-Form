@@ -53,50 +53,7 @@ $(document).ready(function() {
 
 
 }); /* ESTE ES EL DOCUMENT READY */ 
-   /* $('input[type="range"]::-webkit-slider-runnable-track').change(function () {
-    var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
-    
-    $(this).css('background-image',
-                'linear-gradient(to right'
-                + ', #94A14E' + val*100 + '), '
-                + ', #C5C5C5' + val*100 + ')'
-                );
-	});*/
-  
-	/* this is the code I wrote to animate labels without frameworks: 
-
-	var myInputs =  $(".estiloInput");
-
-	myInputs.each(function() {
-		var input = $(this).children('input')[0];
-		var label = $(this).children('label')[0];
-		$(input).on("focus", function()
-			{ 
-				focus(input, label)
-			});
-		$(input).on("focusout", function(){ 
-			focusOut(input, label)
-		});
-	});*/
-
-/* this are the functions invoked above for the label animation. You can see this in the first 
-commit. 
-
-function focus (input, label) {
-	if (!label.classList.contains('active') && input.value == '') {
-        $(label).addClass('active');  
-    }
-    else if (input.value == '') { 
-        $(label).removeClass('active');
-    };
-}
-
-function focusOut (input, label) {
-	if (input.value == '') { 
-        $(label).removeClass('active');
-    };
-
-} */
+   
 
 		
 

@@ -84,62 +84,7 @@ is not good enough, so I think I'll fix that with medias-queries */
 	justify-content: center; 
 }
 
-/* this is the css that works with the inputs I did prior to the use of Materialize.  
 
-
-.estiloInput {
-	position: relative;
-	display: flex;
-	justify-content: center; 
-	height: 66px;
-}
-
-.estiloInput label {
-    color: rgba(0,0,0,0.5);
-    position: absolute;
-    top: 40px;
-    left: 75px;
-    font-size: 16px;
-    cursor: text;
-    -webkit-transition: .2s ease-out;
-    -moz-transition: .2s ease-out;
-    -o-transition: .2s ease-out;
-    -ms-transition: .2s ease-out;
-    transition: .2s ease-out;
-    font-family: "roboto"; 
-    font-weight: 400; 
-}
-
-
-
-input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    outline: 0;
-    height: 35px;
-    width: 330px;
-    font-size: 16px;
-    box-shadow: none;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    transition: all .3s;
-    margin-top: 30px;
-    font-weight: 500; 
-    color: black;
-}
-
-.estiloInput label.active {
-    font-size: 12px;
-    -webkit-transform: translateY(-60%);
-    -moz-transform: translateY(-60%);
-    -ms-transform: translateY(-60%);
-    -o-transform: translateY(-60%);
-    transform: translateY(-24px); 
-}
-
-*/
 .modified {
 	display: flex;
 	justify-content: center; 
@@ -420,10 +365,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
           box-shadow: 0 0 0 0;
 }
 
-/*.input-field label:not(.label-icon).active {
-
-}*/
-
 .btn.myBtn {
 	background-color: #00ACC1; 
   margin-bottom: 23px;
@@ -450,7 +391,7 @@ label.selection {
   top: 5px;9c
 } 
 
-/* errors divs style */
+/* error divs style */
 
 div.errors p {
   color: #F44336;
@@ -565,19 +506,132 @@ div#menu-dropdown ul li:hover {
   border-radius: 5px;
 }
 
-/*input[type=range]#range {
+/* Medias-queries */
 
-    -webkit-appearance: none;
-    -moz-apperance: none;
-    border-radius: 6px;
-    height: 6px;
-    background: -linear-gradient(to right, #94A14E, #C5C5C5); 
-}
+/*Mobile*/
 
-input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none !important;
-    background-color: #E9E9E9;
-    border: 1px solid #CECECE;
-    height: 15px;
-    width: 15px;
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+              body {
+                background-image: linear-gradient(to right #44B8BA, #663096);
+              }
+
+              .row.custom {
+                background: rgba(255, 255, 255, 0.3);
+                height: 60px;
+                margin-top: 0px;
+                border-bottom-right-radius: 2px; 
+                border-bottom-left-radius: 2px; 
+
+              }
+
+              .custom img {
+                top: 22px;
+              }
+
+              .custom h2 {
+                top: 22px;
+                
+              }
+
+              div#menu-dropdown ul {
+                background-color: rgba(238, 238, 238, 1);
+                opacity: 1; 
+                color: #ffffff;
+                width: 150px;
+                border-radius: 0px;
+              }
+
+              div#menu-dropdown ul li {
+                height: 40px;
+                color: #939393;
+              }
+              div.col.s12.titulo { 
+                width: 100%;
+                margin-top: 0px;
+                height: 80px; 
+                background-color: #80DEEA;  
+              }
+
+              .titulo h1 { 
+                font-size: 16px;
+                color: white; 
+                margin-top: 32px;
+              }
+
+              .form {
+                margin-top: 0;
+                width: 100%; 
+                box-shadow: 0px 0px 0px, 0px 0px 0px; 
+              }
+
+              .form:hover {
+                box-shadow: 0px 0px 0px, 0px 0px 0px; 
+                border: 0;
+              }
+
+              input[type=text]:not(.browser-default) {
+                width: 280px; 
+              }
+
+              input[type=email]:not(.browser-default) {
+                width: 280px;
+                          
+              }
+
+              .input-field {
+                width: 280px;
+             
+              }
+
+              .input-field label.label {
+                width: 280px;
+                z-index: 0; 
+               
+              }
+
+              .row.horn {
+                display: flex;
+                justify-content: center; 
+              }
+
+              .myClass {
+                width: 228px;
+                margin: 0px;
+              }
+
+              .check p {
+                width: 280px; 
+
+              }
+
+              .checked {
+                display: flex;
+                justify-content: center; 
+              }
+
+              p#checkbox-error {
+                width: 280px; 
+                position: relative;
+                top: 0px;
+                left: 0px;
+                font-size: 12px;
+                margin: 0px;
+               }
+
+              .row .col.s12 {
+                margin: 0;
+                left: 0;
+                right: 0; 
+              }
+
+              .row .col {
+                padding: 0;
+              }
+
+
+
 }
