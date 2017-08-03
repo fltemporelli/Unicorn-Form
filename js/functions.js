@@ -21,22 +21,38 @@ $(document).ready(function() {
 
 	var checkbox = $('input[type="checkbox"]'); 
 
-			$(checkbox).on("click", function () { 
+	$(checkbox).on("click", function () { 
 
-			if(checkbox.attr("value") == "on") {
+		if(checkbox.attr("value") == "on") {
 
-				checkbox.attr("value", "off"); 
+			checkbox.attr("value", "off"); 
 
-			}
+		}
 
-			else {
+		else {
 
-				checkbox.attr("value", "on");
-			
-			}
-
+			checkbox.attr("value", "on");
+		
+		}
 
 	}); 
+
+	$('#mail').on("focusout", function() {
+
+		if($('#mail').hasClass('invalid')) {
+
+			$('div.icon').show(); 
+ 
+		} 
+
+		else {
+			$('div.icon').slideUp(); 
+		}
+
+	}); 
+
+
+}); /* ESTE ES EL DOCUMENT READY */ 
    /* $('input[type="range"]::-webkit-slider-runnable-track').change(function () {
     var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
     
@@ -62,7 +78,6 @@ $(document).ready(function() {
 			focusOut(input, label)
 		});
 	});*/
-}); 
 
 /* this are the functions invoked above for the label animation. You can see this in the first 
 commit. 
@@ -107,7 +122,9 @@ function formValidation () {
 			$('.row .checked p').show(); 
 		}
 
-
+		if($('#mail').val() == '') {
+			$('#emptyMail').show(); 
+		}
 
 }
 
@@ -122,25 +139,31 @@ function reset () {
 
 		$('#gender').on('change', function () {
 			$('div.show p').slideUp();
+			$('#genderSelect').show(); 
 		}); 
 
 
 		$('#color').on('change', function () {
 			$('div.error3 p').slideUp();
+			$('#furSelect').show(); 
+		}); 
+
+		$('#mail').on('focus', function() {
+			$('#emptyMail').slideUp(); 
 		}); 
 }
 
 function dropDown() {
 
 		$('#nav').on('click', function () {
-				$('#menu-dropdown').toggle(500); 
+				$('#menu-dropdown').toggle(400); 
 		}); 
 
 }
 
 function closeDropdown() {
 		$('#nav').on('focusout', function () {
-				$('#menu-dropdown').hide(500); 
+				$('#menu-dropdown').hide(400); 
 		}); 
 
 }

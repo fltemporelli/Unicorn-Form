@@ -41,9 +41,9 @@
 	        			</div>
 	        			<div class="row modified" id="fade">
       						<div class="input-field">
-							    <label for="select" class="selection">Unicorn's Gender</label>
+							    <label for="select" id="genderSelect" class="selection">Unicorn's Gender</label>
 							    <select id="gender">
-							      <option value="">Unicorn's Gender</option>
+							      <option value="" disabled selected>Unicorn's Gender</option>
 							      <option value="1">Female</option>
 							      <option value="2">Male</option>
 							      <option value="3">Doesn't believe in gender</option>
@@ -53,7 +53,7 @@
   						</div>
   						<div class="row modified">
       						<div class="input-field">
-      					        <label for="select" class="selection">Fur color</label>
+      					        <label for="select" id="furSelect" class="selection">Fur color</label>
 							    <select id="color">
 							      <option  value="" disabled selected>Fur color</option>
 							      <option value="1">Blue</option>
@@ -75,7 +75,7 @@
       							<input type="range" id="test5" min="5" max="25" />
 						      	<div class="scale">	
 							    	<label for="min">5 cm</label>
-							    	<label for "max">25 cm</label>
+							    	<label for="max">25 cm</label>
 							    </div>
 						    </div>
  						</div>
@@ -83,6 +83,7 @@
 					        <div class="input-field">
 					          <input type="email" class="validate" id="mail">
 					          <label for="email" class="label" data-error="Not a valid email address!">Email address</label>
+					          <p id="emptyMail">Write an email address</p>
 					          <div class="icon"><i class="material-icons">warning</i></div>
 					        </div>
       					</div>

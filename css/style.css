@@ -446,6 +446,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 label.selection {
   display: none;
+  font-size: 12px; 
+  top: 5px;9c
 } 
 
 /* errors divs style */
@@ -507,6 +509,17 @@ div.error3 p {
 .icon {
   text-align: right; 
   display: none;
+  margin-top: 2px;
+  color: red;
+}
+
+#emptyMail {
+  display: none;
+  color: red;
+  text-align: left; 
+  z-index: 1;
+  font-family: 'roboto'; 
+  font-size: 12px; 
 }
 
 .select-wrapper span.caret {
