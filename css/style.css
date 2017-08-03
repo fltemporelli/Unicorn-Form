@@ -4,25 +4,13 @@
 	box-sizing: border-box;
 }
 
+/* General Appearence */
+
 body {
 	background: url(../images/fondo3.jpg);
 	background-size: cover; 
 	background-repeat: no-repeat;
 }
-  	/*background-image: radial-gradient(ellipse 100% 850px at right 250px, #44B8BA, #E1D9CC 85%, #E3AEBE);
-  	background-position: 0 75px; 
-}
-
-
-.gradient {
-	background: linear-gradient(140deg, rgba(227, 174, 190, 0.8), transparent 50%);
-	height: 850px;
-}
-
- Note: the gradient is far from perfect, but it is the closest I could get. 
-I think the background-image works just fine but it would take too much time to 
-load in mobile devices and in screens larger than 1240x850 the image quality 
-is not good enough, so I think I'll fix that with medias-queries */
 
 .titulo {
 	display: flex;
@@ -90,6 +78,57 @@ is not good enough, so I think I'll fix that with medias-queries */
 	justify-content: center; 
 }
 
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.row.modified2 {
+    height: 78px;
+    display: flex;
+    justify-content: center; 
+    padding-top: 13px;
+}
+
+.myClass {
+  width: 228px;
+  margin-left: 76px;
+  height: 65px;
+  padding-top: 36px;
+}
+
+.check p {
+  width: 330px;
+  margin-top: 44px;
+  margin-bottom: 0px;
+
+}
+
+.check p label.align {
+  padding-left: 65px;
+}
+
+div.select-wrapper {
+  height: 45px;
+  position: absolute;
+  top: 20px;
+}
+
+.scale {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scale label {
+  font-size: 8px;
+  margin: 0;
+  padding: 0; 
+}
+
+
+/* Inputs style */
 
 input[type=text]:not(.browser-default) {
 	margin: 0;
@@ -140,38 +179,6 @@ input[type=email]:not(.browser-default) {
 	color: #AAAAAA; 
 }
 
-.row {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.row.modified2 {
-    height: 78px;
-    display: flex;
-    justify-content: center; 
-    padding-top: 13px;
-}
-
-.myClass {
-	width: 228px;
-	margin-left: 76px;
-  height: 65px;
-  padding-top: 36px;
-}
-
-.check p {
-	width: 330px;
-  margin-top: 44px;
-  margin-bottom: 0px;
-
-}
-
-.check p label.align {
-	padding-left: 65px;
-}
-
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   position: absolute;
@@ -194,29 +201,12 @@ input[type=email]:not(.browser-default) {
    
 }
 
-div.select-wrapper {
-  height: 45px;
-  position: absolute;
-  top: 20px;
-}
-
 
 input[type=text].select-dropdown {
   height: 30px;
   color: #AAAAAA;
   margin: 0;
   margin-top: 18px;
-}
-
-.scale {
-	display: flex;
-	justify-content: space-between;
-}
-
-.scale label {
-	font-size: 8px;
-	margin: 0;
-	padding: 0; 
 }
 
 input[type=range] {
@@ -233,16 +223,17 @@ input[type=range]+.thumb {
   display: none;
 }
 
-.line {
-    display: block;
-    height: 4px;
-    border: 0;
-    position: relative;
-    top: 12px;
-    width: 114px;
-    background: #80DEEA;
-    z-index: 1;  
-}
+    .line {
+        display: block;
+        height: 4px;
+        border: 0;
+        position: relative;
+        top: 12px;
+        width: 114px;
+        background: #80DEEA;
+        z-index: 1;  
+    }
+
 
 input[type=range]::-webkit-slider-runnable-track {
   height: 3px;
@@ -269,9 +260,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 input[type=range] {
-  /* fix for FF unable to apply focus style bug  */
   border: 1px solid white;
-  /*required for proper track sizing in FF*/
 }
 
 input[type=range]::-moz-range-track {
@@ -300,7 +289,6 @@ input[type=range]::-ms-track {
   background: #DBDBDB;
   border-color: transparent;
   border-width: 6px 0;
-  /*remove default tick marks*/
   color: transparent;
 }
 
@@ -365,6 +353,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
           box-shadow: 0 0 0 0;
 }
 
+/* button styling */
+
 .btn.myBtn {
 	background-color: #00ACC1; 
   margin-bottom: 23px;
@@ -372,6 +362,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
   padding: 0px;
   margin-top: 18px;
 }
+
+/* Dropdowns menus inside form */ 
 
 .dropdown-content li>a, .dropdown-content li>span { 
   color: black;
@@ -469,6 +461,8 @@ div.error3 p {
   color: #AAAAAA;
 }
 
+/* Hamburguer Menu dropdown styling */
+
 div#menu-dropdown {
   position: absolute;
   display: none;
@@ -516,7 +510,7 @@ div#menu-dropdown ul li:hover {
   and (-webkit-min-device-pixel-ratio: 2) {
 
               body {
-                background-image: linear-gradient(to right #44B8BA, #663096);
+                    background: linear-gradient(to right, #ea7598, #4370b7);
               }
 
               .row.custom {
@@ -632,6 +626,36 @@ div#menu-dropdown ul li:hover {
                 padding: 0;
               }
 
+              .btn.myBtn {
+                  background-color: #795bcc; 
+                  width: 280px;
+                  height: 50px;
+                  padding-top: 8px;
+                  margin-top: 15px; 
+                }     
+
+}
+/* Tablets */
+
+/* Portrait and Landscape */
+@media (min-width:600px) 
+and (max-width: 1240px)
+
+{
+              
+              div#menu-dropdown ul {
+                background-color: rgba(238, 238, 238, 1);
+                opacity: 1; 
+                color: #ffffff;
+                width: 300px;
+                border-radius-bottom-right: 5px;
+                border-radius-bottom-left: 5px;
+              }
+
+              div#menu-dropdown ul li {
+                height: 40px;
+                color: #939393;
+              }
 
 
 }

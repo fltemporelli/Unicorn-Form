@@ -11,13 +11,14 @@ $(document).ready(function() {
 
     closeDropdown(); 
 
+    /* input range filling efect */ 	
 
 	$('input[type="range"]').on("input change", function () {
 	    var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
 	    var val2 = val*228; 
 
 	    $('.line').css('width', val2); 
-	});
+	});	
 
 	var checkbox = $('input[type="checkbox"]'); 
 
@@ -52,10 +53,10 @@ $(document).ready(function() {
 	}); 
 
 
-}); /* ESTE ES EL DOCUMENT READY */ 
+});
    
 
-		
+/* Functions */ 		
 
 function formValidation () {
 		var gender = document.getElementById('gender').value;  
