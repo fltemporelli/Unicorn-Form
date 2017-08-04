@@ -52,7 +52,6 @@ $(document).ready(function() {
 
 	}); 
 
-
 });
    
 
@@ -98,12 +97,14 @@ function reset () {
 		$('#gender').on('change', function () {
 			$('div.show p').slideUp();
 			$('#genderSelect').show(); 
+			$('input[type=text].select-dropdown').css('color', '#151515'); 
 		}); 
 
 
 		$('#color').on('change', function () {
 			$('div.error3 p').slideUp();
-			$('#furSelect').show(); 
+			$('#furSelect').show();
+			$('input[type=text].select-dropdown').css('color', '#151515');  
 		}); 
 
 		$('#mail').on('focus', function() {
