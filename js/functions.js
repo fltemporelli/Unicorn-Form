@@ -97,14 +97,14 @@ function reset () {
 		$('#gender').on('change', function () {
 			$('div.show p').slideUp();
 			$('#genderSelect').show(); 
-			$('input[type=text].select-dropdown').css('color', '#151515'); 
+			$('.selectorOne input[type=text].select-dropdown').css('color', '#151515'); 
 		}); 
 
 
 		$('#color').on('change', function () {
 			$('div.error3 p').slideUp();
 			$('#furSelect').show();
-			$('input[type=text].select-dropdown').css('color', '#151515');  
+			$('.selectorTwo input[type=text].select-dropdown').css('color', '#151515');  
 		}); 
 
 		$('#mail').on('focus', function() {
